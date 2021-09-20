@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+body{
+    font-family:'Source Sans Pro', sans-serif;
+    margin:0;
+}
+
+/* start header  */
+header{
+    height:100vh;
+    background-color:#69c282;
+}
+
+/* start navbar  */
+.navbar{
+    background-color:#69c282;
+    padding:20px 0;
+}
+
+.logonames, .logonames:hover{
+    color:#fff;
+}
+
+.menuitems{
+   
+    font-weight:bold;
+    letter-spacing:1px;
+    margin:0 20px;
+    padding:10px;
+
+    transition:color 0.5s;
+}
+
+.menuitems:hover{
+    background-color:#fff;
+    color:#69c282;
+    border-radius:5px;
+}
+
+.buttons{
+    background:transparent;
+    border:3px solid #fff;
+    border-radius:3px;
+    display:none;
+}
+
+.menuicons , .menucross{
+    font-size:22px;
+    padding:10px;
+}
+
+.menuicons.shows{
+    display:none;
+}
+
+.menucross{
+    display:none;
+}
+
+.menucross.shows{
+    display:block;
+}
+
+@media(max-width:1000px){
+    .buttons{
+        display:block;
+    }
+}
+/* end navbar  */
+
+/* start banner  */
+/* start texts  */
+.welcomes{
+    width:90%;
+
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:10;
+}
+
+.welcomemessages{
+    font-size:60px;
+    font-weight:bold;
+
+    animation-name:fromthetop;
+    animation-duration:2.5s;
+}
+
+@media(max-width:800px){
+    .welcomemessages{
+        font-size:45px;
+    }
+}
+
+.mytimes{
+    font-weight:bold;
+    color:#69c282;
+
+}
+
+.welcomeparagraphs{
+    font-size:22px;
+
+    animation-name:fromthebottom;
+    animation-duration:2s;
+
+    animation-delay:0.5s;
+    animation-fill-mode:backwards;
+}
+
+@keyframes fromthetop{
+    0%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0px);
+        opacity:1;
+    }
+}
+
+@keyframes fromthebottom{
+    0%{
+        transform:translateY(70px);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0px);
+        opacity:1;
+    }
+}
+
+.orderbuttons{
+    color:#69c282;
+}
+
+.orderbuttons:hover{
+    color:#fff;
+    background-color:#69c282;
+}
+/* end texts */
+
+/* start background  */
+.banners{
+    height:100vh;
+}
+
+.bannerimages::before{
+    content:'';
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.6);
+
+    position:absolute;
+}
+/* end background  */
+/* end banner  */
+/* end header  */
+
+/* Start Menu Section */
+.titleheaders{
+    color:#69c282;
+}
+
+.menulists{
+    font-weight:bold;
+    border-bottom:2px solid #fff;
+    cursor:pointer; 
+    padding:0 16px;
+    /* margin:0 25px;     */
+}
+
+.menulists.actives , .menulists:hover{
+    color:#0f0a70;
+    font-weight:bold;
+    border-bottom:2px solid #0f0a70; 
+}
+
+.imagecontainers{
+    margin-bottom:25px;
+    overflow:hidden;
+}
+
+.card{
+    position:relative;
+}
+
+.menutexts{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column; 
+
+    background-color:#fff;
+    opacity:0;
+
+    transform:translateY(-220px);
+}
+
+.foodnames{
+    color:#69c282;
+    font-weight:bold;
+    font-size:40px;
+}
+
+.prices{
+    color:#0f0a70;
+    font-weight:bold;
+    font-size:25px;
+}
+
+/* End Menu Section  */
